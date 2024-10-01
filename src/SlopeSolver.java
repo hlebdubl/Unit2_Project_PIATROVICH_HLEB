@@ -1,11 +1,14 @@
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 public class SlopeSolver {
-    private int x1;
-    private int x2;
-    private int y1;
-    private int y2;
+    private double x1;
+    private double x2;
+    private double y1;
+    private double y2;
     private double x3;
 
-    SlopeSolver(int x1, int x2, int y1, int y2)
+    SlopeSolver(double x1, double x2, double y1, double y2)
     {
         x1 = this.x1;
         x2 = this.x2;
@@ -13,7 +16,7 @@ public class SlopeSolver {
         y2 = this.y2;
     }
 
-    public double Slope()
+    public double slope()
     {
         double slope = (y2 - y1) / (x2 - x1);
         return slope;
@@ -26,11 +29,22 @@ public class SlopeSolver {
         return yIntercept;
     }
 
+    public double distance()
+    {
+        double distance = sqrt(pow((x2-x1),2) + pow((y2-y1),2));
+        return distance;
+    }
+
+
+
     public String toString()
     {
-        String str = (" " + Slope() + " " + yIntercept());
-
-
+        String str = "First pair: " + "(" + x1 + "," + y1 + ")\n";
+        str += "Second pair: " + "(" + x2 + "," + y2 + ")\n";
+        str += "Slope of the line: " + slope() + "\n";
+        str += "Y-intercept: " + yIntercept() + "\n";
+        str += "Slope-int form: y = " + (y2-y1) + "/" + (x2-x1) + "x" + " + " + yIntercept() + "\n";
+        str += "Distance between points: " + distance();
 
 
         return str;

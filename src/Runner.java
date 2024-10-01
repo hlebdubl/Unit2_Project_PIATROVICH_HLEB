@@ -14,16 +14,20 @@ public class Runner {
         String yy1 = first.substring(3,4);
         String yy2 = second.substring(3,4);
 
-        int x1 = Integer.parseInt(xx1);
-        int x2 = Integer.parseInt(xx2);
-        int y1 = Integer.parseInt(yy1);
-        int y2 = Integer.parseInt(yy2);
+        double x1 = Double.parseDouble(xx1);
+        double x2 = Double.parseDouble(xx2);
+        double y1 = Double.parseDouble(yy1);
+        double y2 = Double.parseDouble(yy2);
 
         System.out.println(x1 + " " + x2 + " " + y1 + " " + y2 );
 
         SlopeSolver wow = new SlopeSolver(x1,x2,y1,y2);
 
         wow.toString();
+
+        System.out.print("Input a 3rd X coordinate: ");
+        String xx3 = s.nextLine();
+        double x3 = Double.parseDouble(xx3);
 
     }
 }
