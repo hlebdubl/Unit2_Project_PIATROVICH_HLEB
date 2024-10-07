@@ -61,10 +61,10 @@ public class SlopeSolver {
     public String printIntercept()
     {
         String intercept = "";
-        intercept += yIntercept();
+        intercept += formatter.format(yIntercept());
         if(yIntercept() > 0 )
         {
-            intercept = "+ " + yIntercept();
+            intercept = "+ " + formatter.format(yIntercept());
         }
 
         return intercept;
@@ -77,7 +77,7 @@ public class SlopeSolver {
         String str = "First pair: " + "(" + (int)Math.round(x1) + "," + (int)Math.round(y1) + ")\n";
         str += "Second pair: " + "(" + (int)Math.round(x2) + "," + (int)Math.round(y2) + ")\n";
         str += "Slope of the line: " + slope() + "\n";
-        str += "Y-intercept: (" + yIntercept() + ", 0)" + "\n";
+        str += "Y-intercept: (" + formatter.format(yIntercept()) + ", 0)" + "\n";
         str += "Slope-int form: y = " + slope() + "x "  + printIntercept() + "\n";
         str += "Distance between points: " + formatter.format(distance());
 
