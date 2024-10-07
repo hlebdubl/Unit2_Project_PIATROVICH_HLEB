@@ -113,9 +113,9 @@ public class Runner {
         System.out.println(wow.toString());
 
 
-       System.out.print("Input a 3rd X coordinate: ");  //third x point
-       String xx3 = s.nextLine();
-       double x3 = Double.parseDouble(xx3);
+        System.out.print("Input a 3rd X coordinate: ");  //third x point
+        String xx3 = s.nextLine();
+        double x3 = Double.parseDouble(xx3);
         System.out.println(wow.pointFinder(x3));
 
 

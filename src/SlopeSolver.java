@@ -62,7 +62,7 @@ public class SlopeSolver {
     {
         String intercept = "";
         intercept += formatter.format(yIntercept());
-        if(yIntercept() > 0 )
+        if(yIntercept() >= 0 )
         {
             intercept = "+ " + formatter.format(yIntercept());
         }
@@ -86,8 +86,8 @@ public class SlopeSolver {
 
     public String pointFinder(double x3)
     {
-        String point = "The coordinate point with that value is: (" + x3 + "," + formatter.format(thirdPoint(x3)) + ")";
-        return point;
+        String point3 = "The coordinate point with that value is: (" + formatter.format(x3) + "," + formatter.format(thirdPoint(x3)) + ")";
+        return point3;
     }
 
 }
