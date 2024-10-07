@@ -86,7 +86,7 @@ public class SlopeSolver {
 
     public String pointFinder(double x3)
     {
-        String point = "The coordinate point with that value is: (" + x3 + "," + thirdPoint(x3) + ")";
+        String point = "The coordinate point with that value is: (" + x3 + "," + formatter.format(thirdPoint(x3)) + ")";
         return point;
     }
 
